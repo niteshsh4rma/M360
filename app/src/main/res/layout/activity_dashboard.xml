@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".Dashboard">
+
+
+    <com.denzcoskun.imageslider.ImageSlider
+        android:id="@+id/image_slider"
+        android:layout_width="match_parent"
+        android:layout_height="215dp"
+        android:visibility="invisible"
+        app:auto_cycle="true"
+        app:corner_radius="20"
+        app:delay="0"
+        app:placeholder="@drawable/logo"
+        app:error_image="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:period="1000" />
+
+
+    <ImageView
+        android:id="@+id/textsideblock"
+        android:layout_width="4dp"
+        android:layout_height="25dp"
+        android:background="@drawable/textsideblock"
+        app:layout_constraintBottom_toBottomOf="@+id/latestmovietext"
+        app:layout_constraintEnd_toStartOf="@+id/latestmovietext"
+        app:layout_constraintHorizontal_bias="0.79"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/latestmovietext" />
+
+    <TextView
+        android:id="@+id/latestmovietext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:drawableLeft="@drawable/textsideblock"
+        android:text="Latest Movies"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.11"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_slider" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/movie_recycler"
+        android:layout_width="0dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="13dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/latestmovietext" />
+
+    <ImageView
+        android:id="@+id/textsideblock2"
+        android:layout_width="4dp"
+        android:layout_height="25dp"
+        android:background="@drawable/textsideblock"
+        app:layout_constraintBottom_toBottomOf="@+id/latestseriestext"
+        app:layout_constraintEnd_toStartOf="@+id/latestseriestext"
+        app:layout_constraintHorizontal_bias="0.79"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/latestseriestext" />
+
+    <TextView
+        android:id="@+id/latestseriestext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:drawableLeft="@drawable/textsideblock"
+        android:text="Latest Web Series"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.124"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/movie_recycler" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/series_recycler"
+        android:layout_width="0dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="13dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/latestseriestext" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
