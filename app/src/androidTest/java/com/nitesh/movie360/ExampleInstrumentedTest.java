@@ -20,9 +20,9 @@ public class ExampleInstrumentedTest {
     @Test
     public void useAppContext() {
         // Context of the app under test.
-        Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
+        Context appContexts = InstrumentationRegistry.getInstrumentation().getTargetContext();
 //         testing is done here
 
-        assertEquals("com.nitesh.movie360", appContext.getPackageName());
+        assertEquals("com.nitesh.movie360", appContexts.getPackageName());
     }
 }
